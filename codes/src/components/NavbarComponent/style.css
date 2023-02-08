@@ -56,7 +56,32 @@
     background-color: var(--white);
     width: 100%;
     height: 100vh;
-    margin-top: auto;
+    padding-top: 15vw;
+    color: var(--black);
+}
+.BarsSide ul{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.BarsSide li{
+    padding: 0.7vw;
+    color: var(--black);
+    font-size: 2vw;
+}
+.BarsSide li h3{
+    font-weight: 450;
+}
+.BarsSide li button{
+    font-size: 2.1vw;
+    margin: .1vw .5vw;
+    font-weight: 400;
+    margin-top: 0.5vw;
+}
+.BarsSide li h3:hover{
+    color: var(--gold);
 }
 @media screen and (max-width: 650px) {
     .Navbar{

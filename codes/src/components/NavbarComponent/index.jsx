@@ -21,7 +21,13 @@ function Navbar() {
         <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675857963/download_fimwgc.png" alt="" />
     </div>
     <div className="BarsSide">
-        
+        <ul>
+            <li><h3>BOSH SAHIFA</h3></li>
+            <li><h3>BIZ HAQIMIZDA</h3></li>
+            <li><h3>BAJARILGAN ISHLAR</h3></li>
+            <li><h3>KONTAKTLAR</h3></li>
+            <li><button>UZ</button><button>RU</button></li>
+        </ul>
     </div>
     </>
   );
