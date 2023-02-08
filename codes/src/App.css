@@ -26,6 +26,9 @@ body{
     width: 100%;
     padding: 7% 2%;
 }
+.overlay{
+  background-color: rgba(0, 0, 0, 0.3);
+}
 :root{
   --black: #000;
   --white: #FFF;
