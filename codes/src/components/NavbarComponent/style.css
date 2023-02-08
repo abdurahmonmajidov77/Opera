@@ -44,6 +44,8 @@
     padding: .2vw 2.5vw;
     background-color: var(--white);
     top: 0;
+    z-index: 2;
+    transition: 1s;
 }
 .BarsNav button{
     font-size: 5.5vw;
@@ -58,9 +60,7 @@
     height: 100vh;
     padding-top: 18vw;
     color: var(--black);
-    transform: translateX(-100%);
-    animation-name: barserSide;
-    animation-duration: 1s;
+    transform: translateX(-200%);
 }
 .BarsSide ul{
     display: flex;
@@ -86,13 +86,8 @@
 .BarsSide li h3:hover{
     color: var(--gold);
 }
-@keyframes barserSide {
-    from{
-        transform: translateX(-100%);
-    }
-    to{
-        transform: translateX(100%);
-    }
+.HandleCloseSide{
+    display: none;
 }
 
 @media screen and (min-width: 650px) {

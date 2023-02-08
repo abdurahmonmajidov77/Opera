@@ -2,19 +2,18 @@ import { useRef } from 'react';
 import './style.css';
 
 function Navbar() {
-    const BarsSide = useRef();
+    const barsSide = useRef();
     const btnOpen = useRef();
     const btnClose = useRef();
-    btnClose.current.style.dislay = 'none'
     const HandleOpenSide = () =>{
-        btnClose.current.style.dislay = 'block'
-        btnOpen.current.style.dislay = 'none'
-        BarsSide.current.style.dislay = 'block'
+        btnClose.current.style.display = 'block'
+        btnOpen.current.style.display = 'none'
+        barsSide.current.style.transform = 'translateX(0%)'
     }
     const HandleCloseSide = () =>{
-        btnClose.current.style.dislay = 'none'
-        btnOpen.current.style.dislay = 'block'
-        BarsSide.current.style.dislay = 'none'
+        btnClose.current.style.display = 'none'
+        btnOpen.current.style.display = 'block'
+        barsSide.current.style.transform = 'translateX(-200%)'
     }
   return (
     <>
@@ -29,11 +28,11 @@ function Navbar() {
         </ul>
     </div>
     <div className="BarsNav">
-        <button onClick={HandleOpenSide} ref='btnOpen'><i className='fa-solid fa-bars'></i></button>
-        <button onClick={HandleCloseSide} ref='btnClose'><i className='fa-solid fa-bars'></i></button>
+        <button onClick={HandleOpenSide} ref={btnOpen}><i className='fa-solid fa-bars'></i></button>
+        <button onClick={HandleCloseSide} className='HandleCloseSide' ref={btnClose}><i className='fa-solid fa-bars'></i></button>
         <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675857963/download_fimwgc.png" alt="" />
     </div>
-    <div className="BarsSide" ref='BarsSide'>
+    <div className="BarsSide" ref={barsSide}>
         <ul>
             <li><h3>BOSH SAHIFA</h3></li>
             <li><h3>BIZ HAQIMIZDA</h3></li>
