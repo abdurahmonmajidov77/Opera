@@ -61,6 +61,7 @@
     padding-top: 18vw;
     color: var(--black);
     transform: translateX(-200%);
+    overflow-y: scroll;
 }
 .BarsSide ul{
     display: flex;
@@ -79,7 +80,7 @@
 }
 .BarsSide li button{
     font-size: 3.6vw;
-    margin: .1vw .5vw;
+    margin: .1vw 2vw;
     font-weight: 400;
     margin-top: 0.5vw;
 }
