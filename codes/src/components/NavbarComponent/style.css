@@ -58,6 +58,9 @@
     height: 100vh;
     padding-top: 18vw;
     color: var(--black);
+    transform: translateX(-100%);
+    animation-name: barserSide;
+    animation-duration: 1s;
 }
 .BarsSide ul{
     display: flex;
@@ -82,6 +85,20 @@
 }
 .BarsSide li h3:hover{
     color: var(--gold);
+}
+@keyframes barserSide {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .BarsSide{
+        display: none;
+    }
 }
 @media screen and (max-width: 650px) {
     .Navbar{
@@ -109,9 +126,10 @@
 }
 @media screen and (max-width: 400px) {
     .BarsSide li{
-        font-size: 5.0vw;
+        font-size: 5.5vw;
+        margin: 1.2vw;
     }
     .BarsSide li button{
-        font-size: 5.1vw;
+        font-size: 5.6vw;
     }
 }
