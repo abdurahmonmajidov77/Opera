@@ -7,6 +7,10 @@ function App() {
     <div className="App">
       <Navbar/>
       <Header/>
+      <button className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
+      <div className='modalTel'>
+        
+      </div>
     </div>
   );
 }
