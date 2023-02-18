@@ -59,7 +59,7 @@
     background-color: var(--white);
     width: 100%;
     height: 100vh;
-    padding-top: 18vw;
+    padding-top: 25vw;
     color: var(--black);
     transform: translateX(-200%);
     overflow-y: scroll;
@@ -73,11 +73,11 @@
     flex-direction: column;
 }
 .BarsSide li{
-    padding: 0.7vw;
+    padding: 0.1vw;
     color: var(--black);
-    font-size: 3.5vw;
 }
 .BarsSide li h3{
+    font-size: 2.6vw;
     font-weight: 450;
 }
 .BarsSide li button{
