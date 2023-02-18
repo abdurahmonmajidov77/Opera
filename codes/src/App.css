@@ -51,6 +51,20 @@ body{
     right: 3%;
     bottom: 5%;
 }
+.TelUp{
+    color: gray;
+    background-color: white;
+    padding: 1.3vw 1.4vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    display: none;
+}
 .Tel:hover{
     animation-name: TelOnHover;
     z-index: 2;
@@ -59,27 +73,58 @@ body{
 .modalTel{
     background-color: white;
     width: 30%;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1vw;
+    padding: 2vw;
     z-index: 2;
     border-radius: 1vw;
     box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 8%;
     bottom: 13%;
+    animation-name: OnOpenModal;
+    animation-duration: .6s;
+    display: none;
 }
 .modalTel h3{
     font-size: 1.7vw;
+    text-align: center;
 }
 .modalTel input{
     border: none;
     outline: none;
-    font-size: 1.4vw;
+    font-size: 1.6vw;
+    margin: .6vw 0;
     color: black;
+    width: 80%;
+    border: .09vw solid black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.modalTel input::placeholder{
+    color: black;
+}
+.modalTel button{
+    background-color: rgb(26, 163, 26);
+    color: white;
+    padding: 1vw;
+    width: 80%;
+    border-radius: 1vw;
+    font-size: 1.6vw;
+}
+.modalTel button:hover{
+    opacity: .8;
+}
+.modalTel p{
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 1vw;
+}
+.modalTel h4{
+    font-size: 1.55vw;
+    text-align: center;
 }
 @keyframes TelOnHover {
     0%{
@@ -98,6 +143,24 @@ body{
         transform: rotate(0deg);
     }
 }
+
+@keyframes OnOpenModal {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes OnCloseModal {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
 
 @media screen and (max-width: 650px) {
     .Tel{
