@@ -8,6 +8,7 @@
     position: fixed;
     box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.2);
     top: 0;
+    z-index: 2;
 }
 .Navbar img{
     width: 20%;

@@ -22,7 +22,7 @@ input,select,button{
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
-    background-color: black;
+    /* background-color: black; */
 }
 .container{
     width: 100%;
@@ -40,22 +40,69 @@ body{
 }
 .Tel{
     color: #FFF;
-    background-color: green;
+    background-color: rgb(26, 163, 26);
     padding: 1.3vw 1.4vw;
     font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
 }
 .Tel:hover{
     animation-name: TelOnHover;
-    animation-duration: 1s;
+    z-index: 2;
+    animation-duration: 2s;
+}
+.modalTel{
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vw;
+    z-index: 2;
+    border-radius: 1vw;
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 8%;
+    bottom: 13%;
+}
+.modalTel h3{
+    font-size: 1.7vw;
+}
+.modalTel input{
+    border: none;
+    outline: none;
+    font-size: 1.4vw;
+    color: black;
+}
+@keyframes TelOnHover {
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 @media screen and (max-width: 650px) {
     .Tel{
         font-size: 6vw;
-        padding: 3.3vw 3.4vw;
+        padding: 3.5vw 3.6vw;
+        right: 5%;
     }
 }
