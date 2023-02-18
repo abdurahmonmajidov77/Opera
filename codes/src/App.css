@@ -41,5 +41,21 @@ body{
 .Tel{
     color: #FFF;
     background-color: green;
-    padding: 1vw;
+    padding: 1.3vw 1.4vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.Tel:hover{
+    animation-name: TelOnHover;
+    animation-duration: 1s;
+}
+
+@media screen and (max-width: 650px) {
+    .Tel{
+        font-size: 6vw;
+        padding: 3.3vw 3.4vw;
+    }
 }
