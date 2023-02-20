@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import './App.css';
+import FooterComponent from './components/FooterComponent';
 import Header from './components/HeaderComponent';
 import Navbar from './components/NavbarComponent';
 
@@ -35,6 +36,7 @@ function App() {
         <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
         <h4>+99893 535 00 44</h4>
       </form>
+      <FooterComponent/>
     </div>
   );
 }
