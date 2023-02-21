@@ -18,6 +18,9 @@
     color: var(--black);
     font-size: 1.2vw;
 }
+.overP{
+    display: none;
+}
 .aboutComp button{
     color: var(--black);
     border: 0.2vw solid var(--gold);
@@ -65,19 +68,25 @@
     cursor: pointer;
 }
 @keyframes modal {
-    from{
+    0%{
         top: 100%;
     }
-    to{
+    99%{
         top: 20%;
+    }
+    100%{
+        display: block;
     }
 }
 @keyframes closeModal {
-    from{
+    0%{
         top: 20%;
     }
-    to{
+    99%{
         top: 100%;
+    }
+    100%{
+        display: none;
     }
 }
 @media(max-width: 650px){

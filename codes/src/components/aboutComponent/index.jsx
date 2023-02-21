@@ -2,26 +2,27 @@ import { useState, useRef } from "react"
 import "./style.css"
 
 function AboutComponent() {
-    const [close ,setclose] = useState(false)
     const modal = useRef()
+    const closeModalBtn = useRef()
+    const closeOverlayBtn = useRef()
+    const openModalBtn = useRef()
     const openModal = () => {
-        setclose(true) 
         modal.current.style.animationName = "modal"
         modal.current.style.animationDuration = "1s"
+        closeModalBtn.current.style.display = 'block'
+        closeOverlayBtn.current.style.display = 'block'
     }
     const closeModal = () => {
-        setclose(false)
         modal.current.style.animationName = "closeModal"
         modal.current.style.animationDuration = "1s"
+        closeModalBtn.current.style.display = 'none'
+        closeOverlayBtn.current.style.display = 'none'
     }
     return(
         <div className="aboutComp">
-            {close ? 
-                <i onClick={closeModal} className="fa-solid fa-xmark"></i> : null}
-            {close ? 
-                <div onClick={closeModal}  className="overlay"></div> : null
-            }
-            {close ? <div ref={modal} className="aboutModal">
+            <i onClick={closeModal} ref={closeModalBtn} className="fa-solid fa-xmark overP"></i>
+            <div onClick={closeModal} ref={closeOverlayBtn} className="overlay"></div>
+                <div ref={modal} className="aboutModal">
                     <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675861456/OPERA_olbqhc.png" alt="img" />
                     <h1>Biz haqimizda</h1>
                     <p>Opera brendni rivojlantirish, strategiya bilan ishlash, yangidan-yangi nyuanslarga tayangan holda biznes muammolarini yechish, tahlil qilish va tadqiqot o'tkazishga qaratilgan jamoa.</p>
@@ -37,12 +38,11 @@ function AboutComponent() {
                     <p>— Kreativlik;</p>
                     <p>— G'amxo'rlik;</p>
                     <p>— Maksimallik va professionallik</p>
-                </div> : null
-            }
+                </div> 
             <div className="container">
                 <h1>Biz haqimizda</h1>
                 <p>Biz har doim tanish narsalarga yangicha nazar tashlaydigan va nostandart yechimlar tufayli mijoz byudjetini tejaydigan mustaqil ijodiy agentligimiz.</p>
-                <button onClick={openModal}>Batafsil</button>
+                <button onClick={openModal} ref={openModalBtn}>Batafsil</button>
             </div>
         </div>
     )
