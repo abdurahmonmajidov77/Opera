@@ -13,8 +13,8 @@
     color: var(--black);
 }
 .aboutComp p{
-    width: 50%;
-    margin: 2% auto;
+    width: 60%;
+    margin: 3% auto;
     color: var(--black);
     font-size: 1.2vw;
 }
@@ -37,7 +37,6 @@
     width: 40%;
     top: 20%;
     margin-bottom: 20%;
-    animation-name: modal;
     animation-duration: 2s;
 }
 .aboutComp .aboutModal img{
@@ -70,5 +69,41 @@
     }
     to{
         top: 20%;
+    }
+}
+@keyframes closeModal {
+    from{
+        top: 20%;
+    }
+    to{
+        top: 100%;
+    }
+}
+@media(max-width: 650px){
+    .aboutComp h1{
+        font-size: 7vw;
+    }
+    .aboutComp p{
+        font-size: 3.5vw;
+    }
+    .aboutComp button{
+        font-size: 3.5vw;
+        font-weight:700;
+    }
+    .aboutComp .aboutModal{
+        width: 70%;
+    }
+    .aboutComp .aboutModal h1{
+    font-size: 4.6vw;
+    }
+    .aboutComp .aboutModal h2{
+        font-size: 4.1vw;
+    }
+    .aboutComp .aboutModal p{
+        width: 80%;
+        font-size: 3.2vw;
+    }
+    .aboutComp i{
+        font-size: 6vw;
     }
 }

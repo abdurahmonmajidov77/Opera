@@ -1,22 +1,25 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import "./style.css"
 
 function AboutComponent() {
     const [close ,setclose] = useState(false)
+    const modal = useRef()
     const openModal = () => {
-        setclose(true)
+        setclose(true) 
+        modal.current.style.animationName = "modal"
     }
     const closeModal = () => {
         setclose(false)
+        modal.current.style.animationName = "closeModal"
     }
     return(
         <div className="aboutComp">
             {close ? 
                 <i onClick={closeModal} className="fa-solid fa-xmark"></i> : null}
             {close ? 
-                <div onClick={closeModal} className="overlay"></div> : null
+                <div onClick={closeModal}  className="overlay"></div> : null
             }
-            {close ? <div className="aboutModal">
+            {close ? <div ref={modal} className="aboutModal">
                     <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675861456/OPERA_olbqhc.png" alt="img" />
                     <h1>Biz haqimizda</h1>
                     <p>Opera brendni rivojlantirish, strategiya bilan ishlash, yangidan-yangi nyuanslarga tayangan holda biznes muammolarini yechish, tahlil qilish va tadqiqot o'tkazishga qaratilgan jamoa.</p>
