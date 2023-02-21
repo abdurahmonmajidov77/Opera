@@ -1,0 +1,74 @@
+.aboutComp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.aboutComp .container{
+    padding: 7%;
+}
+.aboutComp h1{
+    font-size: 4.5vw;
+    color: var(--black);
+}
+.aboutComp p{
+    width: 50%;
+    margin: 2% auto;
+    color: var(--black);
+    font-size: 1.2vw;
+}
+.aboutComp button{
+    color: var(--black);
+    border: 0.2vw solid var(--gold);
+    padding: 1.5% 4%;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+}
+.aboutComp button:hover{
+    background: var(--gold);
+    color: var(--white);
+}
+.aboutComp .aboutModal{
+    display: block;
+    position: absolute;
+    background: var(--white);
+    z-index: 2;
+    width: 40%;
+    top: 20%;
+    margin-bottom: 20%;
+    animation-name: modal;
+    animation-duration: 2s;
+}
+.aboutComp .aboutModal img{
+    width: 100%;
+    margin-bottom: 7%;
+}
+.aboutComp .aboutModal h1{
+    font-size: 2.6vw;
+}
+.aboutComp .aboutModal h2{
+    font-size: 2.1vw;
+}
+.aboutComp .aboutModal p{
+    width: 80%;
+    margin: 5% auto;
+    font-size: 1.4vw;
+}
+.aboutComp i{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 3vw;
+    z-index: 3;
+    color: #FFF;
+    cursor: pointer;
+}
+@keyframes modal {
+    from{
+        top: 100%;
+    }
+    to{
+        top: 20%;
+    }
+}
