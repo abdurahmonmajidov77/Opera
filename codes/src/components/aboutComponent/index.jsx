@@ -7,10 +7,12 @@ function AboutComponent() {
     const openModal = () => {
         setclose(true) 
         modal.current.style.animationName = "modal"
+        modal.current.style.animationDuration = "1s"
     }
     const closeModal = () => {
         setclose(false)
         modal.current.style.animationName = "closeModal"
+        modal.current.style.animationDuration = "1s"
     }
     return(
         <div className="aboutComp">
