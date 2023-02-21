@@ -20,6 +20,7 @@
 }
 .overP{
     display: none;
+    position: fixed;
 }
 .aboutComp button{
     color: var(--black);
@@ -32,16 +33,25 @@
     background: var(--gold);
     color: var(--white);
 }
+.ModalUpOl{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    z-index: 4;
+}
 .aboutComp .aboutModal{
     display: block;
-    position: absolute;
+    position: fixed;
     background: var(--white);
     z-index: 2;
     width: 40%;
     top: 20%;
     margin-bottom: 20%;
     animation-duration: 2s;
-    display: none;
+    top: 100%;
+    height: 80vh;
+    overflow-y: scroll;
 }
 .aboutComp .aboutModal img{
     width: 100%;
@@ -59,35 +69,12 @@
     font-size: 1.4vw;
 }
 .aboutComp i{
-    position: absolute;
     right: 5%;
     top: 5%;
     font-size: 3vw;
     z-index: 3;
     color: #FFF;
     cursor: pointer;
-}
-@keyframes modal {
-    0%{
-        top: 100%;
-    }
-    99%{
-        top: 20%;
-    }
-    100%{
-        display: block;
-    }
-}
-@keyframes closeModal {
-    0%{
-        top: 20%;
-    }
-    99%{
-        top: 100%;
-    }
-    100%{
-        display: none;
-    }
 }
 @media(max-width: 650px){
     .aboutComp h1{
