@@ -1,8 +1,12 @@
 import { useRef } from 'react';
 import './App.css';
+import AboutComponent from './components/aboutComponent';
 import FooterComponent from './components/FooterComponent';
 import Header from './components/HeaderComponent';
+import { HelpComponent } from './components/helpComponent';
+import { MensComponent } from './components/mensComponent';
 import Navbar from './components/NavbarComponent';
+import ProjectComponent from './components/projectComponent';
 
 function App() {
   const OpenModalUp = useRef()
@@ -27,6 +31,11 @@ function App() {
     <div className="App">
       <Navbar/>
       <Header/>
+      <AboutComponent/>
+      <ProjectComponent/>
+      <HelpComponent/>
+      <MensComponent/>
+      <FooterComponent/>
       <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
       <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
       <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
@@ -36,7 +45,6 @@ function App() {
         <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
         <h4>+99893 535 00 44</h4>
       </form>
-      <FooterComponent/>
     </div>
   );
 }
